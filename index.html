@@ -3,29 +3,92 @@ title: Home
 layout: default
 ---
 <div class="container pt-2">
-  <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="5000">
-        <img src="/images/logo.png" class="d-block m-auto" alt="#">
-      </div>
-      <div class="carousel-item" data-bs-interval="5000">
-        <img src="/images/logo.png" class="d-block m-auto" alt="#">
-      </div>
-      <div class="carousel-item">
-        <img src="/images/logo.png" class="d-block m-auto" alt="#">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
   <div class="container-fluid py-6">
-    <h1 class="font-weight-light text-center mt-5 display-1"><b>Title</b></h1>
+    <h1 class="font-weight-light text-center display-5"><b>IndyKorea Webzine</b></h1>
+
+      <div class="carousel" data-bs-ride="carousel" id="carouselExample">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/MagazineCover1.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/MagazineCover1.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/MagazineCover1.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/MagazineCover1.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/MagazineCover1.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/logo.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script>
+        var items = document.querySelectorAll('.carousel .carousel-item');
+        items.forEach((e) => {
+          const slide = 4;
+          let next = e.nextElementSibling;
+          for(var i = 0; i < slide; i++){
+            if (!next) {
+              next = items[0]
+            }
+            let clonechild = next.cloneNode(true)
+            e.appendChild(clonechild.children[0])
+            next = next.nextElementSibling
+          }
+        })
+      </script>
+
     <div class="container text-center my-3">
       <div class="mt-5">
         <h3>content</h3>
