@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="container">
+
+    <br>
+    {% include breadcrumbs.html %}
+
+    <h2 class="display-6 fw-bold mt-5">{{ page.title }}</h2>
+    <p>Published on {{ page.pretty }} by {{ page.author }}</p>
+
+    <hr>
+
+    {{ content }}
+
+    <img src="{{ page.image }}"  alt="Magazine-cover" style="max-width: 20%;">
+    <br>
+
+</div>
